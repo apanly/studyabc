@@ -1,0 +1,28 @@
+<div id="breadcrumbs">
+    <nav>
+        <ol class="breadcrumbs">
+            <li class="home"><a href="/">YYABC</a></li>
+            <li class="home"><a href="/kaoshi">考试</a></li>
+            <?php if($type=="home"):?>
+                <li>CET4 & CET6</li>
+            <?php elseif($type=="cet4"):?>
+                <li>CET4</li>
+            <?php elseif($type=="cet6"):?>
+                <li>CET6</li>
+            <?php endif;?>
+        </ol>
+        <div id="main-content">
+            <div class="data-list">
+                <?php if($datalist):?>
+                    <ul>
+                        <?php foreach($datalist as $item):?>
+                            <li><a  href="/kaoshi/detail?id=<?php echo $item['ID'];?>"><?php echo $item['CETTITLE'];?>(<?php echo $item['CETDATE'];?>)</a></li>
+                        <?php endforeach;?>
+                    </ul>
+                <?php endif;?>
+            </div>
+            <?php $this->component("Global_Page_pagenation",array("pageinfo"=>$pageinfo));?>
+        </div>
+    </nav>
+</div>
+

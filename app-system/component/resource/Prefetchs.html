@@ -1,0 +1,10 @@
+<?php
+$js_items = $this->get_prefetch_javascripts();
+$style_items = $this->get_prefetch_styles();
+if($js_items || $style_items):
+?>
+<script type="text/javascript"><!--
+function _l0(u,t){try{var o=document.createElement(!!t?'script':'link'),s=document.getElementsByTagName('script')[0];o.type=!!t?'text/javascript':'text/css';if(!!t){o.src=u;o.async=true;}else{o.href=u;o.rel='stylesheet';}s.parentNode.insertBefore(o,null);}catch (e) {}}(function(){<?php foreach ($style_items as $value): ?>_l0('<?php echo $this->get_style_url($value); ?>');<?php endforeach; ?><?php foreach ($js_items as $value): ?>_l0('<?php echo $this->get_javascript_url($value); ?>',1);<?php endforeach; ?>})();
+//-->
+</script>
+<?php endif;?>

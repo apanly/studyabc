@@ -1,0 +1,54 @@
+<div id="main-content">
+    <?php if($datalist):?>
+    <div id="record-list">
+        <div class="data-list">
+            <ul>
+                <?php foreach($datalist as $data):?>
+                <li>
+                    <div class="example english">
+                        <h2><?php echo $data['pdate'];?></h2>
+                        <p>
+                            <?php echo $data['question'];?>
+                        </p>
+                        <p>
+                            <table class="testing">
+                                <tbody>
+                                <?php for($i=0;$i<$data['choicesteps'];$i++):?>
+                                <?php $tmpchoicelist=array_slice($data['choices'],$i*2,2,true);?>
+                                    <tr>
+                                        <?php foreach($tmpchoicelist as $key=>$item):?>
+                                            <td class="<?php echo $key;?> <?php if($data['right']==$key):?> right <?php endif;?>"><a  href="javascript:void(0);" ><?php echo $key;?>.<?php echo $item;?></a></td>
+                                        <?php endforeach;?>
+                                    </tr>
+                                <?php endfor;?>
+                                </tbody>
+                            </table>
+                        </p>
+                        <p>
+                            <?php echo $data['tip'];?>
+                        </p>
+                    </div>
+                    <!--SHARE-->
+                </li>
+                <?php endforeach;?>
+            </ul>
+        </div>
+    </div>
+    <?php $this->component("Global_Page_pagenation",array("pageinfo"=>$pageinfo));?>
+    <?php endif;?>
+</div>
+
+<!--<div class="share-analyse" style="display: none;">
+            <span class="share-to-share"><span class="share-to">
+                <a data-clog="eng_share,sina" class="sina sp clog-js" href="javascript:void(0);"
+                   alt="分享到新浪微博" title="分享到新浪微博">sina</a><a data-clog="eng_share,netease"
+                                                            class="netease sp clog-js"
+                                                            href="javascript:void(0);" alt="分享到网易微博"
+                                                            title="分享到网易微博">网易</a><a
+                    data-clog="eng_share,tencent" class="tencent sp clog-js"
+                    href="javascript:void(0);" alt="分享到腾讯微博" title="分享到腾讯微博">腾讯微博</a><a
+                    data-clog="eng_share,kaixin" class="kaixin sp clog-js"
+                    href="javascript:void(0);" alt="分享到开心网" title="分享到开心网">开心</a>
+            </span>
+                <a class="share sp" href="javascript:void(0);" title="">分享</a></span>
+</div>-->

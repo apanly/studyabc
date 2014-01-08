@@ -1,0 +1,32 @@
+<?php foreach ($this->get_javascripts() as $value): ?>
+<script type="text/javascript" src="<?php echo $this->get_javascript_url($value); ?>"></script>
+<?php endforeach; ?>
+<?php if ($this->is_boundable_resources_enabled()): ?>
+    <?php if ($this->get_boundable_javascripts()): ?>
+        <script type="text/javascript" src="<?php echo $this->get_boundable_javascripts_url(); ?>"></script>
+    <?php endif ?>
+<?php else: ?>
+    <?php foreach ($this->get_boundable_javascripts() as $value): ?>
+        <script type="text/javascript" src="<?php echo $this->get_javascript_url($value); ?>"></script>
+    <?php endforeach; ?>
+<?php endif ?>
+<script type="text/javascript">
+<?php
+$blocks = '';
+foreach (Dispatcher::getInstance()->get_script_blocks() as $block) {
+    $blocks .= preg_replace('/^\s*<script[^>]*>(.*)<\/script>\s*$/ims', '$1', $block);
+};
+
+$minify_js = Dispatcher::getInstance()->get_config('minify_js');
+if ($minify_js) {
+    if (defined("SYS_PATH")) {
+        require_once SYS_PATH . "lib/JSMin.php";
+    } else {
+        apf_require_file('JSMin.php');
+    }
+    echo JSMin::minify($blocks);
+} else {
+    echo $blocks;
+}
+?>
+</script>

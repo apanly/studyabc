@@ -1,0 +1,27 @@
+<div id="breadcrumbs">
+    <nav>
+        <ol class="breadcrumbs">
+            <li class="home"><a href="/">YYABC</a></li>
+            <li class="home"><a href="/kaoshi">考试</a></li>
+            <li>
+                <?php if($data['prevuri']):?>
+                    <a class="default prev" href="<?php echo $data['prevuri'];?>">上一篇</a>
+                <?php endif;?>
+
+                <?php echo $data['title'];?>
+                <?php if($data['nexturi']):?>
+                    <a class="default next" href="<?php echo $data['nexturi'];?>">下一篇</a>
+                <?php endif;?>
+            </li>
+        </ol>
+        <div id="main-content">
+            <p class="kaoshititle"><?php echo $data['title'];?></p>
+            <p style="text-align: center;">来源:YYabc学习社区 发布于:<?php echo $data['date'];?></p>
+            <p>&nbsp;</p>
+            <?php foreach($data['content'] as $item):?>
+               <p><?php echo $item;?></p>
+            <?php endforeach;?>
+        </div>
+    </nav>
+</div>
+

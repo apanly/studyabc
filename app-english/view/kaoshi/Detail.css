@@ -1,0 +1,70 @@
+<?php require_class('PageHelper');?>
+#breadcrumbs ol, #breadcrumbs ul {
+    list-style: none outside none;
+}
+#breadcrumbs nav {
+    background-color: #FFFFFF;
+    border: 1px solid #E7E8E9;
+    border-radius: 3px 3px 3px 3px;
+    margin: 0 0 38px 0;
+    width: 990px;
+}
+#breadcrumbs nav ol.breadcrumbs {
+    float: none;
+    font-weight: normal;
+    height: 38px;
+    list-style: none outside none;
+    margin: 0;
+}
+
+#breadcrumbs nav ol.breadcrumbs li {
+    float: left;
+    margin: 0;
+    padding: 0 0 0 15px;
+}
+#breadcrumbs nav ol.breadcrumbs li, #breadcrumbs nav ol.breadcrumbs li a {
+    color: #30363F;
+    font-size: 12px;
+    font-weight: normal;
+    height: 38px;
+    line-height: 38px;
+}
+#breadcrumbs nav ol.breadcrumbs li.home {
+    padding: 0 0 0 22px;
+}
+
+#breadcrumbs nav ol.breadcrumbs li a {
+    float: left;
+    padding: 0 26px 0 0;
+    margin-left: 0px;
+    background: url(<?=PageHelper::pure_static_url('kaoshi/breadcrumb_separator.gif');?>) no-repeat 100% 50%;
+}
+#breadcrumbs #main-content {
+    border-top: 1px solid #E7E8E9;
+    clear: both;
+    font-size: 12px;
+    padding: 20px 5px;
+}
+
+#breadcrumbs #main-content p{
+    font-size: 16px;
+}
+
+#breadcrumbs #main-content p.kaoshititle{
+    font-size: 25px;
+    text-align: center;
+}
+#breadcrumbs nav ol.breadcrumbs li a.default{
+    background: none;
+    float: none;
+}
+
+#breadcrumbs nav ol.breadcrumbs li a.prev{
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+#breadcrumbs nav ol.breadcrumbs li a.next{
+    margin-right: 5px;
+    margin-left: 15px;
+}

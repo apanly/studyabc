@@ -1,0 +1,18 @@
+<?php if ($this->is_boundable_resources_enabled()): ?>
+    <?php if ($this->get_boundable_styles()): ?>
+            <?php if ($this->enabled_inline_styles()):?>
+            <style type="text/css">
+                <?php echo $this->get_inline_styles()."\n";?>
+            </style>
+            <?php else:?>
+                <link rel="stylesheet" rev="stylesheet" href="<?php echo $this->get_boundable_styles_url(); ?>" type="text/css" />
+            <?php endif;?>
+    <?php endif;?>
+<?php else:?>
+    <?php foreach ($this->get_boundable_styles() as $value): ?>
+        <link rel="stylesheet" rev="stylesheet" href="<?php echo $this->get_style_url($value); ?>" type="text/css" />
+    <?php endforeach;?>
+<?php endif;?>
+<?php foreach ($this->get_styles() as $value): ?>
+     <link rel="stylesheet" rev="stylesheet" href="<?php echo $this->get_style_url($value); ?>" type="text/css" />
+<?php endforeach;?>

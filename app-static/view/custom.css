@@ -1,0 +1,153 @@
+a{
+    text-decoration: none;
+}
+.tips h1{
+    color:#646464;
+    font-size: 30px;
+    font-weight: normal;
+    line-height: 1.25;
+    letter-spacing: -2px;
+    text-align: center;
+}
+/*******xuanyan*********/
+.index-userSay {
+    background: none repeat scroll 0 0 #FFFFFF;
+    font-size: 14px;
+    height: 28px;
+    margin: 0 auto 20px;
+    padding: 12px 20px;
+    border:0;
+}
+.index-userSay-inner {
+    margin-right: 80px;
+    position: relative;
+}
+.userSeyCont {
+    display: block;
+    left: 0;
+    position: absolute;
+    text-align: left;
+    top: 0;
+    width: 100%;
+}
+.userPic {
+    border-radius: 40px 40px 40px 40px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+.userId {
+    color: #8A8A8A;
+    margin-right: 10px;
+}
+.entry-header span {
+    border: 1px solid #f5f5f5;
+}
+.entry-header span:hover {
+    border: 1px solid #f5f5f5;
+}
+.goToMotto {
+    background: none repeat scroll 0 0 #50C7AF;
+    color: white;
+    float: right;
+    font-size: 12px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    width: 80px;
+    text-decoration: none;
+}
+a.goToMotto{
+    text-decoration: none;
+    color: white;
+}
+/*****lesson**********/
+.lesson-entry {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 30px 0 30px 0;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.03);
+    float: left;
+    height: 365px;
+    margin: 0 45px 30px 0;
+    transition: all 0.3s ease-in-out 0s;
+    width: 300px;
+}
+.lesson-entry .hd {
+    height: 40px;
+    line-height: 40px;
+}
+.lesson-entry .bd {
+    font-family: Tahoma,"宋体",serif;
+}
+.lesson-entry .lesson-title{
+    display: inline-block;
+    font-size: 16px;
+    padding: 0 20px;
+}
+.lesson-entry .v-words,.lesson-entry .word-card {
+    padding: 20px;
+    text-align: center;
+}
+.v-lesson p, .card-lesson p {
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 6px;
+    text-align: justify;
+}
+.lesson-entry .v-words a, .lesson-entry .word-card a {
+    background-color: #EFEFEF;
+    display: block;
+    margin-bottom: 10px;
+    max-height: 180px;
+    overflow: hidden;
+}
+
+
+.lesson-entry .word-card .word {
+    font-size: 24px;
+    line-height: 25px;
+    margin-bottom: 6px;
+    text-align: left;
+}
+.lesson-entry .more {
+    color: #00B391;
+    margin-left: 120px;
+}
+.lesson-entry .lesson-infos {
+    font-weight: bold;
+    padding: 19px 0 10px 20px;
+}
+
+.bilingual-class a {
+    display: block;
+    height: 71px;
+    padding: 10px 10px 10px 30px;
+    position: relative;
+    transition: all 0.3s ease-in-out 0s;
+    color: #00B391;
+}
+
+.bilingual-class a:hover{
+    background:#ffffff;
+    text-decoration: none;
+}
+
+.bilingual-class .order {
+    background: none repeat scroll 0 0 #00B391;
+    color: #FFFFFF;
+    display: block;
+    font: italic bold 14px Tahoma,sans-serif;
+    height: 90px;
+    left: 0;
+    position: absolute;
+    text-decoration: none;
+    top: 0;
+    width: 20px;
+}
+
+.bilingual-class .class-title {
+    line-height: 20px;
+}
+
+#record-list .last {
+    margin-right: 0;
+}

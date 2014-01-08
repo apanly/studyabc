@@ -1,0 +1,91 @@
+<?php require_class('PageHelper');?>
+.data-list {
+    border-right: 1px solid #EFEFEF;
+    float: left;
+    padding-right: 25px;
+    width: 690px;
+}
+.data-list ul li {
+    border-bottom: 1px solid #EFEFEF;
+    margin-top: 20px;
+    overflow: hidden;
+    padding-left: 15px;
+    position: relative;
+}
+.data-list .english {
+    line-height: 25px;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+.english img {
+    border: 2px solid #EFEFEF;
+    padding: 1px;
+}
+.english h2 {
+    color: #000000;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 0 0 15px;
+}
+
+.example p {
+    font-size: 13px;
+    line-height: 28px;
+    margin-bottom: 5px;
+}
+.english .content p {
+    line-height: 26px;
+}
+.pic-show {
+    float: left;
+    margin: 0 20px 0 0;
+}
+.data-list .share-analyse {
+    position: absolute;
+    right: 0;
+    top: 3px;
+}
+.sp {
+    background: url(<?=PageHelper::pure_static_url("card.png")?>) no-repeat scroll 0 0 transparent;
+}
+.share-to-share .share-to {
+    border: 1px solid #D2D2D2;
+    display: inline-block;
+    height: 20px;
+    line-height: 18px;
+    margin-right: -6px;
+    vertical-align: top;
+    width: 110px;
+}
+.share-to-share a {
+    display: inline-block;
+    height: 0;
+    margin: 0 5px;
+    overflow: hidden;
+    padding-top: 20px;
+    vertical-align: middle;
+    width: 16px;
+}
+.share-to-share .sina {
+    background-position: -184px -28px;
+}
+.share-to-share .netease {
+    background-position: -227px -28px;
+}
+
+.share-to-share .tencent {
+    background-position: -205px -28px;
+}
+.share-to-share .kaixin {
+    background-position: -269px -28px;
+}
+.share-to-share .share {
+    background-position: -333px 0;
+    cursor: default;
+    height: 0;
+    padding-top: 22px;
+    vertical-align: top;
+    width: 42px;
+}
+

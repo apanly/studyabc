@@ -1,0 +1,167 @@
+<div class="debug" id="debug" style="display:none">
+<h4><?=$_SERVER['REQUEST_URI']?></h4>
+<table border='1' cellpadding='5' cellspacing='0'>
+<caption>BENCHMARK</caption>
+<tr><th>NAME</th><th>TIME</th><th>MEMORY (byte)</th></tr>
+<?php foreach ($this->get_benchmarks() as $name=>$times) : ?>
+<?php    $time = $times[APF_Debugger::BENCHMARK_END] - $times[APF_Debugger::BENCHMARK_BEGIN] ?>
+<?php    $memory = $times[APF_Debugger::BENCHMARK_END_MEMORY] - $times[APF_Debugger::BENCHMARK_BEGIN_MEMORY] ?>
+<tr>
+<td><?=$name?></td>
+<td align='right'><?=number_format($time, 4)?></td>
+<td align='right'><?=number_format($memory)?></td>
+</tr>
+<?php endforeach ?>
+</table>
+
+<table border='1' cellpadding='5' cellspacing='0'>
+<caption>MESSAGES</caption>
+<tr><th>TIME</th><th>EXPIRE</th><th>MEMORY (byte)</th><th>MESSAGE</th></tr>
+<?php $pdo=0;?>
+<?php
+$messages = $this->get_messages();
+foreach ($messages as $k=>$message) :?>
+<?php if(substr(print_r($message[APF_Debugger::MESSAGE_CONTENT],true),0,10) == "APF_DB_PDO"){$pdo++;}?>
+<tr>
+    <td align='right'><?=number_format($message[APF_Debugger::MESSAGE_TIME], 4)?></td>
+    <td align='right'>
+    <?php
+    $expire = number_format($messages[$k+1][APF_Debugger::MESSAGE_TIME]-$messages[$k][APF_Debugger::MESSAGE_TIME],4);
+    if($expire > 0.005 and $expire <=0.01){
+        echo "<font color='#FA6509'>$expire</font>";
+    }elseif($expire > 0.01){
+        echo "<font color='red'>$expire</font>";
+    }else{
+        echo $expire;
+    }
+    ?></td>
+    <td align='right'><?=number_format($message[APF_Debugger::MESSAGE_MEMORY])?></td>
+    <td><?=htmlspecialchars(print_r($message[APF_Debugger::MESSAGE_CONTENT],true))?></td>
+</tr>
+<?php endforeach ?>
+</table>
+
+<table border='1' cellspacing='0'>
+<caption>PDO</caption>
+<tr><th>TYPE</th><th>TIMES</th></tr>
+<tr>
+    <td>PDO_QUERY</td>
+    <td><?=$pdo?></td>
+</tr>
+</table>
+
+<table border='1' cellpadding='5' cellspacing='0'>
+<caption>CLIENT_IP</caption>
+<tr><th>IP</th><th>CLIENT_IP</th><th>HTTP_X_FORWARDED_FOR</th></tr>
+<tr>
+    <td><?=$request->get_client_ip()?></td>
+    <td><?=isset($_SERVER['CLIENT_IP']) ? $_SERVER['CLIENT_IP'] : '&nbsp;'?></td>
+    <td><?=isset($_SERVER['HTTP_X_FORWARDED_FOR']) ? $_SERVER['HTTP_X_FORWARDED_FOR'] : '&nbsp;'?></td>
+</tr>
+</table>
+
+<table border='1' cellpadding='5' cellspacing='0'>
+<caption>REQUEST_PARAMETERS</caption>
+<tr><th>NAME</th><th>VALUE</th></tr>
+<?php foreach ($request->get_parameters() as $name=>$value) :?>
+<tr>
+    <td><?=$name?></td>
+    <td><?php print_r($value)?></td>
+</tr>
+<?php endforeach ?>
+</table>
+
+<table border='1' cellpadding='5' cellspacing='0'>
+<caption>REQUEST_COOKIES</caption>
+<tr><th>NAME</th><th>VALUE</th></tr>
+<?php foreach (Dispatcher::getInstance()->get_request()->get_cookies() as $name=>$value) :?>
+<tr>
+    <td><?=$name?></td>
+    <td><?php print_r($value)?></td>
+</tr>
+<?php endforeach ?>
+</table>
+
+<table border='1' cellpadding='5' cellspacing='0'>
+<caption>REQUEST_ATTRIBUTES</caption>
+<tr><th>NAME</th><th>VALUE</th></tr>
+<?php foreach (Dispatcher::getInstance()->get_request()->get_attributes() as $name=>$value) :?>
+<tr>
+    <td><?=$name?></td>
+    <td><?php $this->print_variable($value)?></td>
+</tr>
+<?php endforeach ?>
+</table>
+
+<table border='1' cellpadding='5' cellspacing='0'>
+<caption>CONFIG_INFOMATION</caption>
+<tr><th>NAME</th><th>process</th><th>final_result</th></tr>
+<?php
+$final_config=@Dispatcher::getInstance()->get_final_config();
+foreach (Dispatcher::getInstance()->get_debug_config() as $name=>$value) :
+?>
+<tr>
+    <td><?=$name?></td>
+    <td><?php $this->print_variable(array_reverse(array_keys($value)))?></td>
+    <td><?php $this->print_variable($final_config[$name])?></td>
+</tr>
+<?php endforeach ?>
+</table>
+
+</div>
+<?php /*?>
+<script>
+Event.observe(window, 'load', function() {
+    var debugPanel = $(document.createElement("div"));
+    Element.insert(document.body, debugPanel);
+
+    Element.select(document.body, 'div.debug').each(function(item) {
+        debugPanel.insert(item.remove());
+        item.show();
+    });
+
+    Event.observe(document, 'keydown', function(event) {
+        if (event.keyCode != 120) {
+            return;
+        }
+        Element.select(debugPanel, 'div.debug').each(function(item) {
+            item.toggle();
+        });
+    });
+});
+</script>
+<?php */ ?>
+<script>
+window.onload = function (){
+    var debugPanel = document.createElement("div");
+    document.body.appendChild(debugPanel);
+
+    var debugDiv   = document.getElementById("debug");
+    debugPanel.appendChild(debugDiv);
+    debugDiv.style.display = "block";
+};
+
+window.onkeydown = function (e){
+    var e = e || window.event;
+    if(e.keyCode != 120){//F9
+        return ;
+    }
+
+    var debugDiv   = document.getElementById("debug");
+    if(debugDiv.style.display == "block"){
+        debugDiv.style.display = "none";
+    }else{
+        debugDiv.style.display = "block";
+    }
+};
+
+function SystemToggle(id){
+    var obj = document.getElementById(id);
+    if(obj.style.display == "block"){
+        obj.style.display = "none";
+    }else{
+        obj.style.display = "block";
+    }
+}
+
+</script>

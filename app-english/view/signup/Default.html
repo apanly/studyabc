@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="tips"><h1>注册YYabc</h1></div>
+    <div class="page-account-clean page-signup row">
+        <section class="span10">
+            <form method="POST" class="form-stacked" id="form-signup" novalidate="novalidate">
+                <p class="account-clean-alert-message error">&nbsp;</p>
+                <fieldset>
+                    <input type="hidden" value="personal" name="type">
+                    <div class="clearfix">
+                        <label for="email">E-Mail</label>
+                        <div class="input" style="position: relative;">
+                            <input type="email" size="30" name="email" id="email" class="xlarge">
+                            <span class="help-inline"></span>
+                            <div class="suggest-container" style="position: absolute; overflow: hidden; left: 0px; top: 35px; width: 308px; visibility: hidden;"></div></div>
+                    </div><!-- /clearfix -->
+                    <div class="clearfix">
+                        <label for="password">密码</label>
+                        <div class="input">
+                            <input type="password" size="30" name="password" id="password" class="xlarge">
+                            <span class="help-inline"></span>
+                        </div>
+                    </div><!-- /clearfix -->
+                </fieldset>
+                <div class="">
+                    <button class="signup_button" type="submit"></button>
+                </div>
+                <p>
+                    <a href="/">《DNSPod 域名解析服务协议》</a>
+                </p>
+            </form>
+        </section>
+
+        <aside class="span4">
+            <p>已经有了账户？
+                <a href="/login">马上登录</a></p>                <br>
+            <br>
+            <div style="margin-top:30px;">
+                <a href="/"><img src="<?=PageHelper::pure_static_url('login_4year.jpg')?>"></a>
+            </div>
+        </aside>
+    </div>
+
+</div>

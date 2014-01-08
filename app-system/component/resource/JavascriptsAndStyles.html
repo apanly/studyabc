@@ -1,0 +1,21 @@
+<?php foreach ($this->get_styles() as $value): ?>
+<link rel="stylesheet" rev="stylesheet" href="<?php echo $this->get_style_url($value); ?>" type="text/css"></link>
+<?php endforeach; ?>
+<?php foreach ($this->get_javascripts() as $value): ?>
+<script type="text/javascript" src="<?php echo $this->get_javascript_url($value); ?>"></script>
+<?php endforeach; ?>
+<?php if ($this->is_boundable_resources_enabled()): ?>
+<?php if ($this->get_boundable_styles()): ?>
+<link rel="stylesheet" rev="stylesheet" href="<?php echo $this->get_boundable_styles_url(); ?>" type="text/css"></link>
+<?php endif ?>
+<?php if ($this->get_boundable_javascripts()): ?>
+<script type="text/javascript" src="<?php echo $this->get_boundable_javascripts_url(); ?>"></script>
+<?php endif ?>
+<?php else: ?>
+<?php foreach ($this->get_boundable_styles() as $value): ?>
+<link rel="stylesheet" rev="stylesheet" href="<?php echo $this->get_style_url($value); ?>" type="text/css"></link>
+<?php endforeach; ?>
+<?php foreach ($this->get_boundable_javascripts() as $value): ?>
+<script type="text/javascript" src="<?php echo $this->get_javascript_url($value); ?>"></script>
+<?php endforeach; ?>
+<?php endif ?>

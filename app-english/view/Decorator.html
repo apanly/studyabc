@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="zh_CN"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang="zh_CN"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang="zh_CN"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="zh-CN"> <!--<![endif]-->
+<?php foreach ($this->get_head_sections() as $section) { echo $section, "\n"; } ?>
+<title><?php echo $this->get_title(); ?></title>
+<?php $this->component('Resource_StyleBlocks'); ?>
+</head>
+<body>
+<!-- Topbar
+================================================== -->
+<?php $this->component("Global_Header_Topbar",array("action"=>$this->getAction(),"type"=>$this->getType(),"userinfo"=>$this->getUserInfo()));?>
+<!-- Page
+================================================== -->
+<div id="page">
+    <div class="container"> <?php $this->real_page() ?></div>
+</div>
+<footer>
+    <div class="container">
+        <h3 class="panel-title"><a href="<?php echo uri::homeinterUri();?>">智能家居</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+                href="<?php echo uri::bookUri();?>">"以书会友"图书馆</a></h3>
+    </div>
+</footer>
+<div class="modal-backdrop fade in" style="display: none;"></div>
+<div class="modal hide fade in" style="display: none;">
+    <div class="modal-header"><a class="close" href="javasript:void(0);">×</a>
+        <h3>阿D提示您</h3></div>
+    <div class="modal-body">
+        <span class="d_message-inline warning"><i></i></span>
+        <p>用户登录超时或未登录。请重新登录。</p>
+        <div style="clear:both"></div>
+    </div>
+    <div class="modal-footer">
+        <button class="button secondary" id="pass-confirmation">确认</button>
+    </div>
+</div>
+<?php $this->component('Resource_ScriptBlocks','head'); ?>
+<?php $this->component('Resource_ScriptBlocks'); ?>
+</body>
+</html>

@@ -1,0 +1,18 @@
+.debug {
+    overflow:scroll;;
+    background-color: #eeeeee;
+    border:1px solid #000;
+    margin: 5px;
+    padding: 5px;
+    text-align:left;
+}
+
+.debug h4 {
+    margin:0;
+}
+
+.debug td {
+    vertical-align: top;
+    font-family:monospace;
+}
+

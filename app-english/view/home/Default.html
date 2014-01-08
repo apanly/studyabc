@@ -1,0 +1,136 @@
+<div id="main-content">
+    <div id="record-list">
+        <div class="entry">
+            <div class="entry-header  hold index-userSay">
+                <div class="index-userSay-inner">
+                    <p class="userSeyCont">
+                        <img class="userPic" src="http://oimagea1.ydstatic.com/image?product=cube&amp;w=28&amp;id=3782120747624647326" >
+                        <span class="userId">狂神郭威:</span>走自己的路，让别人无处可走
+                    </p>
+                </div>
+                <a href="javascript:void(0);" class="goToMotto">喊出你的宣言</a>
+            </div>
+        </div>
+        <div class="entry">
+            <div class="lesson-entry v-lesson hold">
+                <div class="hd">
+                    <h2 class="lesson-title">句子练习</h2>
+                    <a class="more"  href="/kaoshi/test">更多练习</a>
+                </div>
+                <div class="bd">
+                    <div class="lesson-content">
+                        <div class="v-words data-list" style="text-align: left;">
+                            <?php echo $list['etestinfo'];?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="entry">
+            <div class="lesson-entry v-lesson hold">
+                <div class="hd">
+                    <h2 class="lesson-title">CET4</h2>
+                    <a class="more"  href="/kaoshi/cet4">更多CET4</a>
+                </div>
+                <div class="bd">
+                    <div class="lesson-content">
+                        <div class="v-words data-list">
+                            <?php if($list['cet4info']):?>
+                            <ul>
+                                <?php foreach($list['cet4info'] as $item):?>
+                                    <li><a href="/kaoshi/detail?id=<?php echo $item['ID'];?>"><?php echo $item['CETTITLE'];?></a></li>
+                                <?php endforeach;?>
+                            </ul>
+                            <?php endif;?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="entry">
+            <div class="lesson-entry v-lesson hold last">
+                <div class="hd">
+                    <h2 class="lesson-title">CET6</h2>
+                    <a class="more"  href="/kaoshi/cet6">更多CET6</a>
+                </div>
+                <div class="bd">
+                    <div class="lesson-content">
+                        <div class="v-words data-list">
+                            <?php if($list['cet6info']):?>
+                            <ul>
+                                <?php foreach($list['cet6info'] as $item):?>
+                                <li><a href="/kaoshi/detail?id=<?php echo $item['ID'];?>"><?php echo $item['CETTITLE'];?></a></li>
+                                <?php endforeach;?>
+                            </ul>
+                            <?php endif;?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="entry">
+            <div class="lesson-entry v-lesson hold">
+                <div class="hd">
+                    <h2 class="lesson-title">双语阅读</h2>
+                </div>
+                <div class="bd">
+                    <p class="lesson-infos">看世界，学英语</p>
+                    <ul class="lesson-content bilingual-class-list">
+                        <?php if($list['engchiinfo']):?>
+                        <?php foreach($list['engchiinfo'] as $key=>$news):?>
+                        <li class="bilingual-class">
+                            <a href="/engchidetail?id=<?php echo $news['ID'];?>">
+                                <ins class="order"><em><?php echo $key+1;?></em></ins>
+                                <div class="class-title">
+                                    <p lang="en" class="en"><?php echo $news['ENGTITLE'];?></p>
+                                    <p lang="zh" class="zh"><?php echo $news['CHITITLE'];?></p>
+                                </div>
+                            </a>
+                        </li>
+                        <?php endforeach;?>
+                        <?php endif;?>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="entry">
+            <div class="lesson-entry v-lesson hold">
+                <div class="hd">
+                    <h2 class="lesson-title">微英语</h2>
+                    <a class="more"  href="/tinyenglish">更多课程</a>
+                </div>
+                <div class="bd">
+                    <div class="lesson-content">
+                        <div class="v-words">
+                            <a  href="/tinyenglish">
+                                <img src="<?php echo $list['tinyenglish']['IMGURI'];?>" class="card-img">
+                            </a>
+                            <p lang="en" class="en"><?php echo $list['tinyenglish']['ECONTENT'];?></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="entry">
+            <div class="lesson-entry v-lesson hold last">
+                <div class="hd">
+                    <h2 class="lesson-title">单词卡片</h2>
+                </div>
+                <div class="bd">
+                    <div class="lesson-content">
+                        <div class="word-card">
+                            <a target="_blank" href="javascript:void(0);">
+                                <img title="hobo" alt="word" src="http://www.yyabc.org/display/2013-12-24/ba947465a3270792c629b7cc6276b38a.png" class="card-img">
+                            </a>
+                            <h3 class="word">hobo
+                                <small>['həʊbəʊ]</small>
+                            </h3>
+                            <p lang="en" class="en">I’m not a hobo. Look, this is my living room.</p>
+                            <p lang="zh" class="zh">我可不是流浪汉，看，这是我的客厅喔。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

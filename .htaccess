@@ -1,0 +1,23 @@
+RewriteEngine On
+RewriteBase /
+#RewriteCond %{HTTP_HOST} ^book.yyabc.org [NC]
+DirectoryIndex english.php
+#if the domain don't have www,add the www and redirect 301
+RewriteCond %{HTTP_HOST} ^yyabc.org [NC]
+RewriteRule ^(.*)$ http://www.yyabc.org/$1 [R=301,L]
+# Image and Flash content Caching for Ten Hours
+<FilesMatch ".(flv|gif|jpg|jpeg|png|ico|swf)$">
+Header set Cache-Control "max-age=36000"
+</FilesMatch>
+RewriteRule ^kaoshi/detail/([0-9]+)\.html$ kaoshi/detail?id=$1[L]
+
+RewriteRule ^images/(.*)$ app-static/view/images/$1 [L]
+RewriteRule ^display/(.*)$ app-upload/display/$1 [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule .* english.php
+
+
+#RewriteRule ^images/(.*)$ app-static/view/images/$1 [L]
+#RewriteRule ^res  index.php [L]
+#RewriteRule !index.php index.php [L]
+#RewriteRule ^(.*)$ index.php [L]

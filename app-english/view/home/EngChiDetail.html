@@ -1,0 +1,43 @@
+<div id="main-content">
+    <div class="data-list">
+        <div class="lesson-control">
+            <span class="en-menu cur" title="显示英文">EN</span>
+            <span class="ch-menu" title="显示中文">中</span>
+            <span class="a1-menu" title="小号字体">A</span>
+            <span class="a2-menu cur" title="中号字体">A</span>
+            <span class="a3-menu" title="大号字体">A</span>
+            <span class="love-menu " title="收藏"></span>
+        </div>
+        <p id="readWrapper" class="lesson-name">
+            <span class="float-cover"></span>
+                       <span class="read-list">
+                              <?php if($engchiinfo['prevuri']):?>
+                                <a  href="<?php echo $engchiinfo['prevuri'];?>" class="ico  ico-dialog-hd-page-prev"></a>
+                              <?php endif;?>
+                              <?php if($engchiinfo['nexturi']):?>
+                                <a   href="<?php echo $engchiinfo['nexturi'];?>" class="ico  ico-dialog-hd-page-next"></a>
+                              <?php endif;?>
+                        <span class="lesson-index" id="articleViewIndex">第<?php echo $engchiinfo['id'];?>课:</span>
+                        <span class="aritcle-title">
+                            <a data-act="title" href="javascript:void(0)" class="rlog-view" id="articleViewTitleLink"><?php echo $engchiinfo['etitle'];?></a>
+                        </span>
+                   </span>
+        </p>
+    </div>
+    <div class="data-list">
+        <div id="article-id" class="article-con">
+            <h4 class="article-title" id="englishTitle"><?php echo $engchiinfo['etitle'];?></h4>
+            <h4 style="display:none;" class="article-title" id="chineseTitle"><?php echo $engchiinfo['ctitle'];?></h4>
+
+            <div class="article-content">
+                <?php if($engchiinfo['engdetail']):?>
+                <?php foreach($engchiinfo['engdetail'] as $key=>$item):?>
+                <p class="english a2"><?php echo $item;?></p>
+
+                <p style="display:none;" class="chinese a2"><?php echo $engchiinfo['chidetail'][$key];?></p>
+                <?php endforeach;?>
+                <?php endif;?>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,98 @@
+<?php require_class('PageHelper');?>
+.article-title {
+    margin: 40px 0;
+    font-size: 20px;
+}
+
+.article-content p.a2 {
+    margin-bottom: 18px;
+    font-size: 16px;
+    line-height: 1.8;
+    font-family: Georgia, Century, Times, serif;
+    color: #3a3a3a;
+}
+.lesson-control {
+    float: right;
+    width: 165px;
+    height: 25px;
+}
+.lesson-control span {
+    float: left;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    background-color: #f5f5f5;
+    line-height: 24px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.lesson-control span.cur {
+    background-color: #dedede;
+}
+
+.lesson-control .en-menu {
+    margin-right: 1px;
+}
+
+.lesson-control .ch-menu {
+    margin-right: 8px;
+}
+
+.lesson-control .love-menu {
+    background: url(<?=PageHelper::pure_static_url('article-menu.png')?>) -136px 0 no-repeat;
+}
+
+#readWrapper {
+    position: relative;
+    z-index: 0;
+    margin: 32px auto 10px;
+    height: 640px;
+}
+p#readWrapper {
+    margin: 0;
+    height: 20px;
+    width: 385px;
+    overflow: hidden;
+    _white-space: nowrap;
+    _text-overflow: ellipsis;
+}
+#readWrapper .read-list {
+    position: relative;
+    display: block;
+    padding: 0 5px;
+    margin: 0 288px 0 83px;
+}
+#readWrapper .read-list {
+    margin: 0;
+    color: #ccc;
+}
+#readWrapper .read-list a {
+    top: -1px;
+}
+.lesson-index {
+    font-weight: bold;
+}
+#readWrapper .aritcle-title {
+    font-weight: bold;
+}
+#readWrapper #articleViewTitleLink {
+    color: #ccc;
+    font-weight: normal;
+    text-decoration:none;
+}
+.ico {
+    display: inline-block;
+    vertical-align: middle;
+    width: 15px;
+    height: 16px;
+    background: url(<?=PageHelper::pure_static_url('icons.png');?>) no-repeat;
+}
+
+#readWrapper .ico-dialog-hd-page-next {
+    background-position: -58px -2px;
+}
+
+#readWrapper .ico-dialog-hd-page-prev {
+    background-position: -42px -2px;
+}

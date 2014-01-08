@@ -1,0 +1,51 @@
+<nav class="topbar">
+    <div class="topbar-inner">
+        <div class="container">
+            <a href="/" class="brand logo_4year">YYabc</a>
+            <?php if($action=="login"):?>
+            <h1 class="nav_string">让英语学习变得高效和有趣</h1>
+            <?php elseif($action=="signup"):?>
+            <h1 class="nav_string">让英语学习变得高效和有趣</h1>
+            <?php elseif($action=="forgot"):?>
+            <h1 class="nav_string">让英语学习变得高效和有趣</h1>
+            <?php else:?>
+            <ul class="nav domain">
+                <li <?php if($type=="home"):?> class="domain" <?php endif;?> ><a href="/">学堂首页</a></li>
+                <li <?php if($type=="engchi"):?> class="domain" <?php endif;?> ><a href="javascript:void(0);">双语阅读</a></li>
+                <li <?php if($type=="kaoshi"):?> class="domain" <?php endif;?> ><a href="/kaoshi">考试</a></li>
+                <li <?php if($type=="tinyenglish"):?> class="domain" <?php endif;?> ><a href="/tinyenglish">微English</a></li>
+                <!--<li><a href="javascript:void(0);">双语电影</a></li>
+                <li><a href="javascript:void(0);">新闻</a></li>
+                <li><a href="javascript:void(0);">演讲</a></li>-->
+                <li><a href="<?php echo uri::homeinterUri();?>">智能家居</a></li>
+                <li><a href="<?php echo uri::bookUri();?>">BookShare</a></li>
+            </ul>
+            <div class="topbar-infomation">
+                <ul>
+                    <?php if($action=="haslogin"):?>
+                        <li class="email_drop">
+                            <span class="name"><?php echo $userinfo['uname'];?></span>
+                        </li>
+                        <li class="account_drop"><a class="account"><span>账户</span> <i class="icon_account_arrow"> </i> </a>
+                            <div class="settings-container">
+                                <ul id="account-dropdown">
+                                    <li><a href="javascript:void(0);"><i class="icon_account_setting"></i>账户设置</a></li>
+                                    <li><a href="javascript:void(0);"><i class="icon_my_service"></i>我的服务</a></li>
+                                    <li><a href="<?php echo uri::loginoutUri();?>"><i class="icon_account_exit"></i>退出</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    <?php else:?>
+                        <li class="signup">
+                            <span class="name"><a href="<?php echo uri::regUri();?>">注册</a></span>
+                        </li>
+                        <li class="login">
+                            <span class="name"><a href="<?php echo uri::loginUri();?>">登录</a></span>
+                        </li>
+                    <?php endif;?>
+                </ul>
+            </div>
+            <?php endif;?>
+        </div>
+    </div>
+</nav>

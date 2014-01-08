@@ -1,0 +1,46 @@
+<?php echo $action;?>
+<div class="container">
+    <div class="tips"><h1>登录YYabc</h1></div>
+    <div class="page-account-clean page-login row">
+        <section class="span10">
+            <form action="/"  method="POST" class="form-stacked" id="form-login" novalidate="novalidate">
+                <p class="account-clean-alert-message error"></p>
+                <fieldset>
+                    <div class="clearfix">
+                        <label for="email">E-Mail</label>
+                        <div class="input" style="position: relative;">
+                            <input type="email" size="30" name="email" id="email" class="xlarge">
+                            <span class="help-inline"></span>
+                            <div class="suggest-container" style="position: absolute; overflow: hidden; left: 0px; top: 35px; width: 308px; visibility: hidden;"></div></div>
+                    </div><!-- /clearfix -->
+                    <div class="clearfix">
+                        <label for="password">密码</label>
+                        <div class="input">
+                            <input type="password" size="30" name="password" id="password" class="xlarge">
+                            <input type="hidden" value="f" name="multilogin">
+                            <span class="help-inline"></span>
+                        </div>
+                    </div><!-- /clearfix -->
+                    <div class="clearfix">
+                        <div class="input">
+                            <label>
+                                <input type="checkbox" value="1" name="remember">
+                                <span>一个月内自动登录</span>
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="">
+                    <button class="login_button" type="submit"></button>
+                </div>
+            </form>
+        </section>
+        <aside class="span4">
+            <p>还没有帐号？ <a href="/signup">立即注册</a></p>
+            <p>» <a href="/login/forgot">忘记密码</a></p>
+            <div style="margin-top:30px;">
+                <a href="/" id="login_ad"><img src="<?=PageHelper::pure_static_url('login_4year.jpg')?>"></a>
+            </div>
+        </aside>
+    </div>
+</div>

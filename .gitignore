@@ -1,0 +1,8 @@
+app-upload/display/*
+*.log
+*.txt
+book/*
+oauth/*
+cdnstatic/*
+config/*
+.idea/*
