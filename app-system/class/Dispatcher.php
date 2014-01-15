@@ -377,7 +377,18 @@ class Dispatcher
         }
         return $this->script_blocks;
     }
-
+    private function __construct() {
+        $this->register_shutdown_function("shutdownRecordLog");
+        register_shutdown_function(array($this, "shutdown"));
+    }
+    public function shutdown() {
+        if (is_array($this->shutdown_functions)) {
+            $functions = array_reverse($this->shutdown_functions);
+            foreach ($functions as $function) {
+                call_user_func($function);
+            }
+        }
+    }
     public function register_shutdown_function($function) {
         $this->shutdown_functions[] = $function;
     }

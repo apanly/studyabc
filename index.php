@@ -5,6 +5,7 @@ define("BASE_URI","");
 define('APP_NAME', 'english');
 define('APP_PATH', dirname(__FILE__) . '/app-'.APP_NAME."/");
 define('SYS_PATH', APP_PATH . "../app-system/");
+define('LOG4PHP_DIR', APP_PATH ."../../log4php/");
 $cached_files=array();
 $G_LOAD_PATH = array(
     APP_PATH,

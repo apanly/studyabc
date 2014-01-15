@@ -171,3 +171,14 @@ function customlog($message){
     syslog(LOG_INFO, $message);
     closelog();
 }
+function shutdownRecordLog(){
+    require_once(LOG4PHP_DIR."Logger.php");
+    Logger::configure(LOG4PHP_DIR."log4php.properties");
+    $logger = Logger::getRootLogger();
+    require_class("util");
+    $ip=util::getRemoteIp();
+    $server=$_SERVER;
+    $referer=$server['HTTP_REFERER'];
+    $uri=$server['REQUEST_URI'];
+    $logger->debug($ip." ".$referer." ".$uri);
+}
