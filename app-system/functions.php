@@ -180,5 +180,7 @@ function shutdownRecordLog(){
     $server=$_SERVER;
     $referer=$server['HTTP_REFERER'];
     $uri=$server['REQUEST_URI'];
-    $logger->debug($ip." ".$referer." ".$uri);
+    $agent=$server['HTTP_USER_AGENT'];
+    $accesslog='"'.$ip.'"'.' "'.$referer.'"'.' "'.$uri.'"'.' "'.$agent.'"';
+    $logger->debug($accesslog);
 }
