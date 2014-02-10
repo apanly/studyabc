@@ -32,7 +32,7 @@ class Mail_mailhelp {
         $mail->Host       = "smtp.qq.com";         // SMTP 服务器
         $mail->Port       = 465;                     // SMTP服务器的端口号
         $mail->Username   = "364054110@qq.com";             // SMTP服务器用户名,注意！！！！这里需要到这个邮箱中开启SMTP服务才可以的
-        $mail->Password   = "GWloveYOU";        // SMTP服务器密码
+        $mail->Password   = "********";        // SMTP服务器密码
         $mail->SetFrom('364054110@qq.com', 'Vincentguo');
         #$mail->AddReplyTo("364054110@qq.com","订单管理");
         $mail->Subject    = $subject;
