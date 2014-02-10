@@ -46,6 +46,9 @@ $config['mappings']['KaoShi_Detail']=array(
 $config['mappings']['KaoShi_Test']=array(
     '^/kaoshi/test$'
 );
+$config['mappings']['WordsCard_Detail']=array(
+    '^/wordcard$'
+);
 
 
 
