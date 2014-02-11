@@ -12,20 +12,21 @@ require_class("Controller");
 require_class("Mail_mailhelp");
 class WordsCard_DetailController extends Controller{
     public function handle_request(){
-        exit();
-        $mailTo = array();
-        $AddAttachment = array();
+        if($_GET['post2qzone']==1){
+            $mailTo = array();
+            $AddAttachment = array();
 //收件人邮箱，可以用array_push函数添加多个
-        array_push($mailTo, array("364054110@qzone.qq.com","helper"));
+            array_push($mailTo, array("364054110@qzone.qq.com","helper"));
 //array_push($AddAttachment,"d:\\照毕业证相.txt");    //邮寄的附件也可添加多个
 //发送的主题
-        $subject = "[IT生活]测试";
-        //发送的邮件内容
-        $body ="<a href='http://www.yyabc.org'>ceshi </a>";
-        $mailhelper=new Mail_mailhelp();
-        $res=$mailhelper->sendmail_sunchis_com($mailTo,$subject,$body,$AddAttachment);
-        var_dump($res);
-        exit();
+            $subject = "[IT生活]测试";
+            //发送的邮件内容
+            $body ="<a href='http://www.yyabc.org'>ceshi </a>";
+            $mailhelper=new Mail_mailhelp();
+            $res=$mailhelper->sendmail_sunchis_com($mailTo,$subject,$body,$AddAttachment);
+            var_dump($res);
+            exit();
+        }
         return "WordsCard_Detail";
     }
 } 

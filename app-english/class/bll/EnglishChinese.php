@@ -35,7 +35,7 @@ class Bll_EnglishChinese
                  );
              }
          }
-         $this->post2qzone($post2qzone);
+         #$this->post2qzone($post2qzone);
      }
     private function post2qzone($articles){
         require_class("Mail_mailhelp");
@@ -48,7 +48,7 @@ class Bll_EnglishChinese
             foreach($articles as $article){
                 $subject = "[IT生活]双语阅读:".$article['etitle'];
                 $tmpcontent=implode("<p>&nbsp;</p>",$article['contents'][0]);
-                $tmpcontent=substr($tmpcontent,0,800)." <a href='http://www.yyabc.org/engchidetail?id={$article['id']}'>阅读全文...</a>";
+                $tmpcontent=substr($tmpcontent,0,800)."<p>&nbsp;</p><a href='http://www.yyabc.org/engchidetail?id={$article['id']}'>阅读全文...</a>";
                 $body ="<span style=\"font-size:18px\">{$article['etitle']}---{$article['ctitle']}<p>&nbsp;</p>{$tmpcontent}</span>";
                 $mailhelper->sendmail_sunchis_com($mailTo,$subject,$body,$AddAttachment);
             }
