@@ -49,6 +49,9 @@ $config['mappings']['KaoShi_Test']=array(
 $config['mappings']['WordsCard_Detail']=array(
     '^/wordcard$'
 );
+$config['mappings']['Wan_List']=array(
+  '^/wan/list$'
+);
 
 
 

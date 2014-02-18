@@ -1,0 +1,1167 @@
+blockquote, body, button, dd, dl, dt, h1, h2, h3, input, li, ol, p, textarea, ul {
+    margin: 0;
+    padding: 0
+}
+body {
+    background: url(images/bg.png) #eceef0;
+    color: #444;
+    cursor: default;
+    display: block;
+    font: 14px/21px Microsoft YaHei, Tahoma, Arial;
+    webkit-font-smoothing: antialiased
+}
+@font-face {
+    font-family: iconfont;
+    src: url(images/tang.eot);
+    src: url(images/tang.eot?#iefix) format('embedded-opentype'), url(images/tang.woff) format('woff'), url(images/tang.ttf) format('truetype'), url(images/tang.svg#svgFontName) format('svg')
+}
+.iconfont {
+    font-family: iconfont;
+    font-size: 14px;
+    font-style: normal;
+    padding-right: 4px
+}
+
+h1, h2, h3 {
+    font-weight: 500;
+    text-shadow: 0 1px 0 #EEE
+}
+
+a {
+    color: #444;
+    text-decoration: none
+}
+
+a:hover {
+    color: #F60
+}
+
+img {
+    border: 0;
+    height: auto;
+    width: auto
+}
+
+li, ol, ul {
+    list-style: none
+}
+
+button, input, textarea {
+    outline: 0
+}
+
+input[type^=password], input[type^=text], textarea {
+    background: #f3f3f3;
+    border: 1px solid #d1d1d1;
+    box-shadow: inset 2px 3px 5px #eee;
+    line-height: 1.5
+}
+
+input:focus, textarea:focus {
+    background: #eee;
+    border-color: #999
+}
+
+input {
+    vertical-align: middle
+}
+
+input[type^=radio] {
+    background: 0;
+    border: 0;
+    width: auto
+}
+
+#wrap {
+    border-bottom: 1px solid #CCC;
+    border-top: 3px solid #999
+}
+
+.alignleft {
+    display: inline;
+    float: left;
+    margin-right: 1.625em
+}
+
+.alignright {
+    display: inline;
+    float: right;
+    margin-left: 1.625em
+}
+
+.aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+#header {
+    border-bottom: 1px solid #CCC;
+    height: 100px;
+    margin: 0 auto;
+    width: 980px
+}
+
+#content {
+    border-top: 1px solid #f6f6f6;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    width: 980px
+}
+
+#main {
+    float: left;
+    overflow: hidden;
+    width: 70%
+}
+
+#sidebar {
+    float: right;
+    overflow: hidden;
+    width: 27%
+}
+
+#footer {
+    border-top: 1px solid #FFF;
+    font-size: 12px;
+    padding: 15px 0;
+    text-align: center
+}
+
+#header .logo {
+    float: left;
+    font-size: 14px;
+    line-height: 26px;
+    margin-top: 25px;
+    position: absolute
+}
+
+#header .logo a {
+    color: #06C;
+    font-size: 28px;
+    text-shadow: 2px 2px 1px #CCC
+}
+
+.selectnav {
+    cursor: pointer;
+    display: none;
+    font-size: 12px;
+    margin: 12px 10px 0 0;
+    width: 90px
+}
+
+#navigation {
+    float: right
+}
+
+#navigation li, #navigation ul {
+    display: inline;
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+#navigation ul li {
+    float: left;
+    position: relative
+}
+
+#navigation ul li a {
+    color: #777;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 10px;
+    text-decoration: none
+}
+
+#navigation ul li a:hover {
+    background: #999;
+    color: #FFF;
+    moz-transition: all .1s ease-in-out;
+    ms-transition: all .1s ease-in-out;
+    o-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+    webkit-transition: all .1s ease-in-out
+}
+
+#navigation ul ul {
+    background: #d6d6d6;
+    display: none;
+    left: 0;
+    position: absolute;
+    top: 30px;
+    top: 51px;
+    z-index: 999
+}
+
+#navigation ul ul li a {
+    color: #333
+}
+
+#navigation ul ul li a:hover {
+    color: #FFF
+}
+
+#navigation ul ul li a {
+    background: 0;
+    border-bottom: 1px dashed #CCC;
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0;
+    padding: 4px 10px;
+    width: 90px
+}
+
+#navigation ul ul ul {
+    left: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 999
+}
+
+#navigation ul ul ul li a {
+    background: 0;
+    border-bottom: 1px dashed #CCC !important;
+    border-top: 1px solid transparent
+}
+
+#navigation ul ul li:last-child a, #navigation ul ul li:last-child a:hover {
+    border-bottom: 1px solid transparent
+}
+
+#navigation ul ul ul li:last-child a {
+    border-bottom: 1px solid transparent !important
+}
+
+#navigation ul li:hover > ul {
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    top: 99%
+}
+
+#navigation ul ul li:hover > ul {
+    left: 100%;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    z-index: 497
+}
+
+#navigation ul li:hover > a {
+    background: #999
+}
+
+#navigation ul ul li:hover > a {
+    color: #FFF
+}
+
+#navigation .blog {
+    display: none
+}
+
+#main .h1 {
+    background: #FFF;
+    box-shadow: 0 1px 2px 0 #CCC;
+    font-size: 24px;
+    margin: 0 0 20px;
+    padding: 20px;
+    webkit-box-shadow: 0 1px 2px 0 #CCC
+}
+
+.post_list {
+    background-color: #FFF;
+    box-shadow: 0 1px 2px #CCC;
+    margin-bottom: 20px;
+    overflow: hidden;
+    padding: 20px 30px 10px
+}
+
+.post_list h2 {
+    overflow: hidden;
+    padding: 10px 0;
+    text-overflow: ellipsis
+}
+
+.post_list h2 a {
+    color: #333;
+    font-size: 26px;
+    overflow: hidden;
+    white-space: nowrap
+}
+
+.post_list h2 a:hover {
+    color: #F60;
+    text-decoration: none
+}
+
+.info {
+    color: #999;
+    font-size: 12px;
+    margin: 0 0 10px
+}
+
+.info a {
+    color: #999
+}
+
+.info a:hover {
+    color: #F60
+}
+
+.excerpt {
+    line-height: 24px;
+    margin-top: 10px
+}
+
+.meta {
+    border-top: 1px solid #EEE;
+    clear: both;
+    color: #999;
+    font-size: 12px;
+    margin: 20px -30px 0 -30px;
+    overflow: hidden;
+    padding: 10px 30px 0;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.meat_span {
+    margin-right: 15px
+}
+
+.meta a {
+    color: #999
+}
+
+.meta a:hover {
+    color: #444;
+    text-decoration: underline
+}
+
+.thumbnail {
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px #d3d3d3;
+    float: left;
+    margin: 0 15px 15px 0;
+    padding: 4px
+}
+
+.thumbnail img {
+    display: block;
+    height: 150px;
+    width: 200px
+}
+
+.thumbnail:hover {
+    background: #e0e0e0
+}
+
+.more {
+    padding-left: 20px
+}
+
+.navigation {
+    float: right
+}
+
+.pagination a, .pagination span {
+    border: 1px #CCC solid;
+    display: inline-block;
+    height: 22px;
+    line-height: 24px;
+    margin: 0 2px;
+    text-align: center;
+    text-decoration: none;
+    width: 22px
+}
+
+.pagination .current {
+    background: #f0f0f0;
+    border: 1px solid #CCC;
+    color: #F60;
+    font-weight: 700;
+    height: 22px;
+    width: 22px
+}
+
+.pagination a:hover {
+    background: #f0f0f0;
+    border: 1px solid #888;
+    color: #333;
+    height: 22px;
+    text-decoration: none;
+    width: 22px
+}
+
+.pagination .page_next, .pagination .page_next:hover, .pagination .page_previous, .pagination .page_previous:hover {
+    height: 22px;
+    text-align: center;
+    width: 70px
+}
+
+.pagination .fir_las, .pagination .fir_las:hover {
+    height: 22px;
+    text-align: center;
+    width: 36px
+}
+
+#article {
+    background-color: #FFF;
+    box-shadow: 0 1px 2px 0 #CCC;
+    margin-bottom: 20px;
+    overflow: hidden;
+    padding: 20px 30px 10px
+}
+
+#article h1 {
+    font-size: 26px;
+    line-height: 30px;
+    padding-bottom: 10px
+}
+
+.text {
+    color: #333;
+    font-size: 14px;
+    margin: 10px 0
+}
+
+.text b, .text strong {
+    font-weight: 600
+}
+
+.text p {
+    line-height: 26px;
+    padding-bottom: 15px;
+    text-indent: 20px
+}
+
+.text h5 {
+    background: #f1f1f1;
+    border: 1px dashed #DDD;
+    font-size: 14px;
+    padding: 4px 10px
+}
+
+.text a {
+    color: #049
+}
+
+.text a:hover {
+    text-decoration: underline
+}
+
+.text form {
+    background: #f1f1f1;
+    border: 1px dashed #ddd;
+    margin: 10px;
+    padding: 10px
+}
+
+.text_add {
+    margin: 20px 0 0;
+    overflow: hidden
+}
+
+.text_add .copy {
+    float: left
+}
+
+.text_add .share {
+    float: right
+}
+
+.page {
+    border-bottom: 1px dashed #CCC;
+    padding-bottom: 10px
+}
+
+.text blockquote {
+    background: #f1f1f1;
+    border: 1px dashed #ddd;
+    margin: 10px 0;
+    padding: 10px
+}
+
+.text blockquote p {
+    text-indent: 0
+}
+
+.text blockquote p:last-child {
+    padding-bottom: 0;
+    text-indent: 0
+}
+
+.text ul li {
+    line-height: 26px;
+    list-style: circle;
+    margin-left: 30px
+}
+
+.text ol li {
+    line-height: 26px;
+    list-style: decimal;
+    margin-left: 30px
+}
+
+.text img {
+    max-width: 100%
+}
+
+ins {
+    color: green
+}
+
+del {
+    color: red
+}
+
+#search {
+    float: none;
+    margin: 0 0 10px;
+    overflow: hidden
+}
+
+#searchform {
+    background: #fe9800;
+    height: 40px
+}
+
+#searchform label {
+    display: none
+}
+
+#s {
+    background: #FFF;
+    border: 0;
+    float: left;
+    font-size: 14px;
+    height: 28px;
+    margin: 7px;
+    padding: 0 10px;
+    width: 70%;
+    z-index: 1
+}
+
+#searchsubmit {
+    background: 0;
+    border: 0;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    width: 40px
+}
+
+#searchsubmit i {
+    color: #fbfbfb;
+    font-size: 24px;
+    text-shadow: 1px 1px 1px #999
+}
+
+#searchsubmit:hover i {
+    color: #FFF
+}
+
+#searchsubmit:active i {
+    text-shadow: 1px 2px 1px #f90
+}
+
+.wenjuan {
+    display: none
+}
+
+.onlyweb {
+    display: block
+}
+
+.sidebar {
+    background-color: #FFF;
+    border-bottom: 2px solid #CCC;
+    box-shadow: 0 1px 2px #CCC;
+    overflow: hidden
+}
+
+.widget {
+    color: #666;
+    margin-bottom: 10px;
+    overflow: hidden;
+    padding: 10px 10px 0
+}
+
+.widget a {
+    color: #666
+}
+
+.widget a:hover {
+    color: #F60
+}
+
+.widget h3 {
+    border-bottom: 1px solid #e5e5e5;
+    color: #333;
+    font-size: 18px;
+    margin: 0 -10px 0 -10px;
+    padding: 5px 0 10px 10px;
+    text-shadow: 0 2px 0 #EEE
+}
+
+.widget ul {
+    padding-top: 10px
+}
+
+.widget .textwidget ul, .widget ul ul {
+    border-top: 0;
+    padding-top: 5px
+}
+
+.widget li {
+    border-bottom: 1px dashed #e0e0e0;
+    line-height: 20px;
+    margin-bottom: 5px;
+    padding: 0 0 5px 8px
+}
+
+.widget .children {
+    background-color: #f9f9fa;
+    font-size: 12px;
+    margin: 5px 0 0 5px
+}
+
+.widget_views-plus {
+    font-size: 12px
+}
+
+.widget_views-plus a {
+    font-size: 14px
+}
+
+.widget_views-plus li {
+    overflow: hidden;
+    white-space: nowrap
+}
+
+.widget_text {
+    background: #f1f1f1;
+    border: 1px dashed #ccc;
+    border-radius: 3px;
+    font-size: 12px;
+    margin: 10px;
+    padding: 8px
+}
+
+.widget_text h3 {
+    border: 0;
+    margin: 0;
+    padding: 0
+}
+
+.textwidget {
+    margin-top: 6px
+}
+
+.textwidget a {
+    color: #00F
+}
+
+.textwidget p {
+    margin: 0;
+    padding: 0
+}
+
+.tagcloud {
+    line-height: 26px;
+    padding-left: 6px
+}
+
+.tagcloud a:hover {
+    text-decoration: underline
+}
+
+.blogroll li {
+    float: left;
+    overflow: hidden;
+    width: 46%
+}
+
+.nowrap ul li {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.comment_ul li img {
+    margin-right: 5px
+}
+
+.comment_ul li a {
+    font-size: 13px
+}
+
+#wp-calendar {
+    text-align: center;
+    width: 100%
+}
+
+#wp-calendar a {
+    color: #F60
+}
+
+.post_link {
+    color: #999;
+    font-size: 12px;
+    height: 20px;
+    margin-bottom: 15px;
+    overflow: hidden
+}
+
+.post_link a {
+    color: #999;
+    font-size: 12px
+}
+
+.post_link .prev {
+    float: left
+}
+
+.post_link .next {
+    float: right
+}
+
+#comments {
+    box-shadow: 0 1px 2px 0 #CCC;
+    margin-bottom: 20px;
+    overflow: hidden
+}
+
+#comments h3 {
+    border-bottom: 1px solid #E6E6E6;
+    padding: 0 0 0 20px;
+    line-height: 30px;
+    color: #b6afa2;
+    height: 30px;
+    font-size: 15px;
+    text-shadow: none
+}
+
+.comment_list {
+    background: #fff;
+    margin: 20px 0 0
+}
+
+.comment_list ol {
+    padding: 0 30px 10px
+}
+
+.comment_list li {
+    border-bottom: 1px dashed #e5e5e5;
+    margin: 0;
+    padding: 10px 0
+}
+
+.avatar {
+    float: left;
+    margin-top: 2px;
+    width: 40px
+}
+
+.comment {
+    overflow: hidden;
+    padding-left: 10px
+}
+
+.comment_meta {
+    overflow: hidden
+}
+
+.comment_meta cite, .comment_meta cite a {
+    color: #333;
+    font-style: normal
+}
+
+.comment_meta cite a:hover {
+    color: #F60
+}
+
+.comment_meta .time {
+    color: #999;
+    font-size: 11px;
+    padding-left: 5px
+}
+
+.comment_meta .edit_link, .comment_meta .reply {
+    float: right;
+    margin-top: -2px;
+    padding-right: 10px
+}
+
+.comment_meta .edit_link a, .comment_meta .reply a {
+    color: #666;
+    font-size: 12px
+}
+
+.comment_meta .edit_link a:hover, .comment_meta .reply a:hover {
+    color: #F60
+}
+
+.comment p {
+    color: #555;
+    font-size: 13px;
+    padding-right: 10px
+}
+
+#comments .children {
+    background-color: #f9f9fa
+}
+
+.comment_list ol ol {
+    border: 1px dashed #e5e5e5;
+    border-bottom: 0
+}
+
+.comment_nav {
+    margin-bottom: 30px;
+    overflow: hidden
+}
+
+#respond {
+    background: #fff;
+    border: 1px solid #E6E6E6
+}
+
+#respond form {
+    padding: 10px 5%;
+    margin: 0 auto;
+    width: 90%
+}
+
+#respond .required-star {
+    position: absolute;
+    color: #d31001;
+    margin-top: 8px
+}
+
+#respond .nickname {
+    height: 30px;
+    line-height: 20px
+}
+
+#respond .comment-content {
+    height: 140px;
+    line-height: 20px;
+    width: 90%
+}
+
+#respond .submit-btn {
+    -webkit-appearance: none;
+    background: #279AEC;
+    color: #fff;
+    border: 2px solid azure;
+    height: 45px;
+    line-height: 45px;
+    width: 100px;
+    padding: 0;
+    font-size: 20px
+}
+
+#respond h3 small a {
+    font-size: 12px;
+    margin-left: 15px
+}
+
+#respond .required {
+    color: red
+}
+
+#respond p {
+    margin-top: 5px;
+    overflow: hidden
+}
+
+#respond label {
+    padding-left: 5px
+}
+
+#respond input, #respond textarea {
+    font-size: 14px;
+    border-radius: 4px;
+    padding: 5px;
+    background: #fff;
+    -webkit-box-shadow: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    box-shadow: none;
+    margin: 0 0 0 15px
+}
+
+#respond .comment-form-comment label, #respond .form-allowed-tags {
+    display: none
+}
+
+.errors_404 {
+    background: url(images/404.png) no-repeat;
+    height: 440px;
+    position: relative;
+    width: 700px
+}
+
+.to_home {
+    height: 28px;
+    left: 310px;
+    position: absolute;
+    top: 340px;
+    width: 80px
+}
+
+.to_back {
+    height: 28px;
+    left: 410px;
+    position: absolute;
+    top: 340px;
+    width: 100px
+}
+
+#footer a {
+    color: #06C
+}
+
+#footer a:hover {
+    color: #F60
+}
+
+.totop {
+    background: #f3f3f3;
+    border: 1px solid #06C;
+    bottom: 30px;
+    color: #06C;
+    cursor: pointer;
+    font-size: 14px;
+    height: 70px;
+    left: 50%;
+    line-height: 16px;
+    margin-left: 500px;
+    overflow: hidden;
+    position: fixed;
+    text-align: center;
+    text-indent: 2px;
+    width: 20px;
+    word-break: break-all
+}
+
+#comments .children {
+    margin: 0 0 0 5px
+}
+
+#comments .children li {
+    padding-left: 10px
+}
+
+#comments ol.children {
+    padding: 0;
+    margin-top: 10px
+}
+
+#comments ol.children #respond {
+    margin: 10px 0 0;
+    width: 90%
+}
+
+@media screen and (max-width: 980px) {
+    #content, #header {
+        width: 96%
+    }
+
+    #s {
+        width: 60%
+    }
+
+    .text_add .share {
+        display: none
+    }
+}
+
+@media screen and (max-width: 650px) {
+    html {
+        webkit-text-size-adjust: none
+    }
+
+    #header p, #navigation #nav, #navigation .my, .comment_meta .time, .meat_max, .sidebar, .text_add .share, .totop {
+        display: none
+    }
+
+    .selectnav, .onlyweb {
+        display: none
+    }
+
+    .wenjuan {
+        display: block
+    }
+
+    #wrap {
+        border-top: 0
+    }
+
+    #header, #header .logo, #header .logo a {
+        display: none
+    }
+
+    #content {
+        padding-top: 5px;
+        width: 100%
+    }
+
+    #main {
+        float: none;
+        margin: 0 auto;
+        overflow: hidden;
+        width: 94%
+    }
+
+    .post_list {
+        padding: 0 10px
+    }
+
+    .post_list h2 {
+        padding: 5px 0
+    }
+
+    .post_list h2 a {
+        font-size: 20px
+    }
+
+    .info {
+        margin: 0
+    }
+
+    .excerpt {
+        font-size: 12px;
+        height: 80px;
+        line-height: 16px;
+        margin-top: 5px;
+        overflow: hidden
+    }
+
+    .excerpt img {
+        height: 66px;
+        width: 90px
+    }
+
+    .text {
+        font-size: 16px
+    }
+
+    .meta {
+        margin: 5px -10px 0 -10px;
+        padding: 5px 10px
+    }
+
+    #onlyweb {
+        display: none
+    }
+
+    #wenjuan {
+        display: block
+    }
+
+    #sidebar {
+        float: none;
+        margin: 0 auto;
+        overflow: hidden;
+        width: 94%
+    }
+
+    #search {
+        display: none
+    }
+
+    #article {
+        margin-bottom: 20px;
+        padding: 10px 10px 5px
+    }
+
+    #article h1 {
+        font-size: 20px
+    }
+
+    #article .meat_span {
+        float: left;
+        width: 44%
+    }
+
+    #article .info {
+        border-bottom: 1px dashed #CCC;
+        overflow: hidden;
+        padding-bottom: 3px;
+        width: 100%
+    }
+
+    #article .meta {
+        padding: 5px 0 0 10px
+    }
+
+    .post_link .prev {
+        float: none
+    }
+
+    .post_link .next {
+        float: none;
+        margin-top: 10px
+    }
+
+    #comments .comment_list ol {
+        padding: 0 10px
+    }
+
+    #comments h3 {
+        padding: 0 0 0 10px
+    }
+
+    #comments .children {
+        margin: 0
+    }
+
+    #comments .children li {
+        padding-left: 0
+    }
+
+    .comment {
+        overflow: hidden;
+        padding-left: 5px
+    }
+
+    .avatar {
+        width: 20px
+    }
+
+    #respond {
+        margin: 0
+    }
+
+    #respond .submit-btn, #respond input, #respond textarea {
+        width: 90%;
+    }
+}
+
+#header {
+    height:auto;
+}
+#header .logo {
+    position: static;
+}
+div.nav {
+    display:block;
+    clear: both;
+    margin-top:20px;
+}
+div.nav a{
+
+    padding:15px;
+    display:inline-block;
+}

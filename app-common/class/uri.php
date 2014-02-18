@@ -30,7 +30,9 @@ class uri {
     public static function bookUri(){
         return "http://book.".self::getBaseDomain();
     }
-
+    public static function playUri(){
+        return "http://www.".self::getBaseDomain().'/wan/list';
+    }
     protected  static function getBaseDomain(){
         $domain=$_SERVER['HTTP_HOST'];
         $strdomain=explode(".",$domain);

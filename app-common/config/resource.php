@@ -1,6 +1,7 @@
 <?php
 $config['cdn_host'] = "yyabc.test";
 $config['cdn_path'] = "/";
+$config['cdn_local_path']="/Users/vincent/code/yyabc/cdnstatic/images/play/juhua10/";//用于存放图片的路径
 $config['cdn_boundable_host'] = "yyabc.test";
 $config['cdn_boundable_path'] = "/";
 $config['boundable_resources'] = false;
