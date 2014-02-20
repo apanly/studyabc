@@ -70,12 +70,12 @@ class Wan_BaseView extends DecoratorView
     }*/
     public function get_head_sections(){
         return array(
-          '<meta name="description" content="英语abc,yyabc,在线英语学习社区,让英语学习变得高效和有趣" />',
-          '<meta name="keywords" content="双语阅读,口语练习,听力练习,英语学习,英语新闻,双语新闻,单词名片,微英语,yyabc" />'
+          '<meta name="description" content="YYabc·玩遍天下,英语abc,yyabc,在线英语学习社区,让英语学习变得高效和有趣" />',
+          '<meta name="keywords" content="YYabc·玩遍天下,双语阅读,口语练习,听力练习,英语学习,英语新闻,双语新闻,单词名片,微英语,yyabc" />'
         );
     }
 
     public function get_title(){
-        return "英语abc,在线英语学习社区,让英语学习变得高效和有趣";
+        return "YYabc·玩遍天下,带你用另一种方式看世界！";
     }
 }

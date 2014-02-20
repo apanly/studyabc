@@ -36,6 +36,13 @@ class Dao_juhua10 {
         $this->execute($sql, $params);
         return $this->mpdo->lastInsertId();
     }
+
+    public function getTodayJuHua($idate){
+        $sql = "SELECT ".$this->getUpperFileds()." FROM ".$this->_table;
+        $sql .= " where idate=? order by id asc";
+        return $this->getAll($sql, array($idate));
+    }
+
     /**
      * 返回全部记录
      * @param $sql

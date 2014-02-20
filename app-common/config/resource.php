@@ -17,3 +17,6 @@ $config['cdn_pure_static_path'] = "/images/";
 $config['cnd_display_host']="yyabc.test";
 $config['cdn_display_path'] = "/display/";
 $config['domain']=".yyabc.test";
+
+$config['cdnstatic_host'] = "cdnstatic.yyabc.test";
+$config['cdnstatic_path'] = "/";

@@ -14,4 +14,10 @@ class Bll_juhua10 {
         $daojuhua=new Dao_juhua10();
         return $daojuhua->insert($data);
     }
+
+    public function getToday(){
+        $daojuhua=new Dao_juhua10();
+        $idate=date("Y-m-d");
+        return $daojuhua->getTodayJuHua($idate);
+    }
 } 

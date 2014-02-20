@@ -35,6 +35,6 @@ class Wan_ListView  extends  Wan_BaseView
     public function get_title(){
         $req=Dispatcher::getInstance()->get_request();
         $datas=$req->get_attributes();
-        return $datas['data']['title']."|英语四六级真题|历年大学英语四六级真题|".parent::get_title();
+        return "每日10句俏皮话|".parent::get_title();
     }
 }
