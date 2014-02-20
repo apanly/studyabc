@@ -53,6 +53,9 @@ $config['mappings']['Wan_List']=array(
   '^/wan/list$'
 );
 
+$config['mappings']['Api_Play']=array(
+    '^/api/play$'
+);
 
 
 
