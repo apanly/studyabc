@@ -56,9 +56,7 @@ class Wan_BaseView extends DecoratorView
     }
     public static function use_javascripts() {
         return array(
-            array("jquery.min.js", PHP_INT_MAX, true),
-//            array("bootstrap.js", PHP_INT_MAX),
-//            array("html5shiv.js", PHP_INT_MAX-1)
+            array(PageHelper::pure_cdnstatic_url("jquery/jquery.min.js"), PHP_INT_MAX, true),
         );
     }
 

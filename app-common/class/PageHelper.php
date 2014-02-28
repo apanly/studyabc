@@ -36,11 +36,13 @@ class PageHelper{
         $schema = $apf->get_request()->is_secure() ? "https" : "http";
         return "$schema://$host$uri";
     }
-	public static function dfs_pic_display_by_host($uri,$hostid) {
-    	$apf = Dispatcher::getInstance();
-        $hostsuffix = @$apf->get_config("dfs_pic_display_host_suffix", "resource");
-        $schema = $apf->get_request()->is_secure() ? "https" : "http";
-        return "$schema://pic$hostid.$hostsuffix$uri";
+    public static function pure_cdnstatic_url($uri){
+        $apf=Dispatcher::getInstance();
+        $host=@$apf->get_config("cdnstatic_host","resource");
+        $path=@$apf->get_config("cdnstatic_path","resource");
+        $schema=$apf->get_request()->is_secure()?"https":"http";
+        return $host?"$schema://$host$path$uri":"$path$uri";
     }
+
 }
 ?>
