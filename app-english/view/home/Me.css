@@ -1,0 +1,17 @@
+p {
+    margin: 0 0 10px;
+}
+.title{
+    font-size: 150%;
+    font-weight: bold;
+}
+.line{
+
+}
+.line p{
+    font-family: 'Helvetica Neue',Helvetica,Arial,'微软雅黑','Microsoft YaHei','宋体',sans-serif;
+    line-height: 1.5;
+    font-size: 100%;
+    width: 49%;
+    display: inline-block;
+}

@@ -1,6 +1,6 @@
 <?php
-require_page("Home_Base");
-class Home_TinyEnglishView extends  Home_BaseView
+require_page("Wan_Base");
+class Home_TinyEnglishView extends  Wan_BaseView
 {
    public function get_view(){
        $req=Dispatcher::getInstance()->get_request();
@@ -15,10 +15,6 @@ class Home_TinyEnglishView extends  Home_BaseView
             parent::use_boundable_styles(),
             array($path . 'TingEnglish.css')
         );
-    }
-
-    public function getType(){
-        return "tinyenglish";
     }
 
     public function get_title(){

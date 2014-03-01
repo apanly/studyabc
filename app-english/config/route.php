@@ -59,6 +59,9 @@ $config['mappings']['Api_Play']=array(
 $config['mappings']['Wan_Projects']=array(
     '^/wan/projects$'
 );
+$config['mappings']['Home_Me']=array(
+    '^/aboutme$'
+);
 
 
 
