@@ -1,0 +1,20 @@
+<?php if($frompage && $endpage):?>
+<div class="navigation">
+    <div class='pagination'>
+        <?php if($page>1):?>
+        <a href='<?php echo $uri;?>?page=<?php echo ($page-1);?>' class='page_previous'>« 上一页</a>
+        <?php endif;?>
+        <?php for($p=$frompage;$p<=$endpage;$p++):?>
+            <?php if($page==$p):?>
+            <span class='current'><?php echo $p;?></span>
+            <?php else:?>
+            <a href='<?php echo $uri;?>?page=<?php echo $p;?>' class='inactive' ><?php echo $p;?></a>
+            <?php endif;?>
+        <?php endfor;?>
+
+        <?php if($page<$pagecnt):?>
+        <a href='<?php echo $uri;?>?page=<?php echo ($page+1);?>' class='page_next'>下一页 »</a>
+        <?php endif;?>
+    </div>
+</div>
+<?php endif;?>

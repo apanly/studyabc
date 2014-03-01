@@ -16,6 +16,11 @@ class Home_TinyEnglishView extends  Wan_BaseView
             array($path . 'TingEnglish.css')
         );
     }
+    public static function use_component() {
+        return array_merge ( parent::use_component (), array (
+            "Global_Page_pgnation"
+        ) );
+    }
 
     public function get_title(){
         return "微英语,每日一句,成就美好未来|".parent::get_title();
